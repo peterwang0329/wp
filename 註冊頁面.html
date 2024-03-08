@@ -16,10 +16,13 @@
                 padding: 20px;
                 width: 25px 10px 4px 35px;
             }
-            .center{
+
+            .center {
+                margin: auto;
                 padding: 10px;
                 border-width: 10px 5px;
             }
+
             p {
                 text-align: center;
                 text-shadow: 2px 1px rgb(255, 157, 0);
@@ -28,23 +31,27 @@
                 font-weight: bold;
                 /**/
             }
+
+            label {
+                font-weight: bold;
+            }
         </style>
         <div class="border">
-            <form>
+            <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" method="get">
                 <p>註冊頁面</p>
-                <div>
+                <div class="center">
                     <div>
-                    <label for="name">姓名:</label><br>
-                    <input type="text" id="name" name="name"><br>
+                        <label for="name">姓名:</label><br>
+                        <input type="text" id="name" name="name" required><br>
                     </div>
                     <label for="passname">帳號:</label><br>
-                    <input type="text" id="passname" name="passname"><br>
+                    <input type="text" id="passname" name="passname" required><br>
                     <label for="password">密碼:</label><br>
-                    <input type="text" id="password" name="password"><br>
+                    <input type="text" id="password" name="password" required><br>
                     <label for="email">email:</label><br>
                     <input type="email" id="email" name="email"><br>
                     <label for="gender">性別:</label>
-                    <form action=""> <!--加action="" 變單選-->
+                    <form action="" required> <!--加action="" 變單選-->
                         <input type="radio" name="gender" value="male">男
                         <input type="radio" name="gender" value="female">女<br>
                     </form>
@@ -64,12 +71,12 @@
                     <label for="subscription">訂閱:</label>
                     <input type="checkbox" id="subscription" name="subscription"><br>
                     <label for="appendix">附件:</label>
-                    <input type="file" id="appendix" name="appendix"><br>
+                    <input type="file" id="appendix" value="點選加入附件" name="appendix"><br>
                     <label for="introduction">自我介紹:</label><br>
                     <textarea id="introduction" name="introduction" rows="10" cols="30" placeholder="請輸入內文"
                         style="text-align: center"></textarea><br>
-                    <button type="submit" name="submit" onclink="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        style="border-radius: 15px">送出</button>
+                    <input type="submit" name="submit" value="送出"
+                        style="border-radius: 15px">
                 </div>
             </form>
         </div>
