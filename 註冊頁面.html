@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="5,https://github.com/peterwang0329">
     <title>註冊頁面</title>
+    <style>
+        .border {
+            position: absolute;
+            left: 37%;
+        }
+
+        header {
+            text-align: center;
+            text-shadow: 2px 2px rgb(255, 157, 0);
+            font-size: 40px;
+            /*文字大小*/
+            font-weight: bold;
+            /**/
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            font-style: italic;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 400px;
+        }
+    </style>
 </head>
-<body>
-    <body bgcolor="#cccccc">
-        <style>
-            .border {
-                margin: auto;
-                width: 50%;
-                border: 3px solid green;
-                padding: 20px;
-                width: 25px 10px 4px 35px;
-            }
 
-            .center {
-                margin: auto;
-                padding: 10px;
-                border-width: 10px 5px;
-            }
-
-            p {
-                text-align: center;
-                text-shadow: 2px 1px rgb(255, 157, 0);
-                font-size: 30px;
-                /*文字大小*/
-                font-weight: bold;
-                /**/
-            }
-
-            label {
-                font-weight: bold;
-            }
-        </style>
-        <p>註冊頁面</p>
-        <div class="border">
-            <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" method="get">
-                
-                <div class="center">
-                    <div>
-                        <label for="name">姓名:</label><br>
-                        <input type="text" id="name" name="name" required><br>
-                    </div>
-                    <label for="passname">帳號:</label><br>
-                    <input type="text" id="passname" name="passname" required><br>
-                    <label for="password">密碼:</label><br>
-                    <input type="text" id="password" name="password" required><br>
-                    <label for="email">email:</label><br>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="gender">性別:</label>
-                    <form action="" required> <!--加action="" 變單選-->
-                        <input type="radio" name="gender" value="male">男
-                        <input type="radio" name="gender" value="female">女<br>
-                    </form>
-                    <label for="birthday">生日:</label>
-                    <input type="date" id="birthday" name="birthday"><br>
-                    <label for="color">喜歡的顏色:</label>
-                    <input type="color" id="color" name="color"><br>
-                    <label for="blood">血型:</label>
-                    <select id="blood" name="blood">
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="AB">AB</option>
-                        <option value="O">O</option>
-                    </select><br>
-                    <label for="tel">電話:</label>
-                    <input type="tel" id="tel" name="tel" placeholder="0000-000-000"><br>
-                    <label for="subscription">訂閱:</label>
-                    <input type="checkbox" id="subscription" name="subscription"><br>
-                    <label for="appendix">附件:</label>
-                    <input type="file" id="appendix" value="點選加入附件" name="appendix"><br>
-                    <label for="introduction">自我介紹:</label><br>
-                    <textarea id="introduction" name="introduction" rows="15" cols="50" placeholder="請輸入內文"
-                        style="text-align: center"></textarea><br>
-                    <input type="submit" name="submit" value="送出"
-                        style="border-radius: 15px">
-                </div>
+<body bgcolor="#cccccc">
+    <header>註冊頁面</header>
+    <hr>
+    <div class="border">
+        <div>
+            <label for="name">姓名:</label><br>
+            <input type="text" id="name" name="name" required><br>
+        </div>
+        <div>
+            <label for="passname">帳號:</label><br>
+            <input type="text" id="passname" name="passname" required><br>
+        </div>
+        <div>
+            <label for="password">密碼:</label><br>
+            <input type="text" id="password" name="password" required><br>
+        </div>
+        <div>
+            <label for="email">email:</label><br>
+            <input type="email" id="email" name="email"><br>
+        </div>
+        <div>
+            <label for="gender">性別:</label>
+            <form action="" required> <!--加action="" 變單選-->
+                <input type="radio" name="gender" value="male">男
+                <input type="radio" name="gender" value="female">女
+                <input type="radio" name="gender" value="num">不願透露
             </form>
         </div>
-    </body>
+        <div>
+            <label for="birthday">生日:</label>
+            <input type="date" id="birthday" name="birthday"><br>
+        </div>
+        <div>
+            <label for="color">喜歡的顏色:</label>
+            <input type="color" id="color" name="color"><br>
+        </div>
+        <div>
+            <label for="blood">血型:</label>
+            <select id="blood" name="blood">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="tel">電話:</label>
+            <input type="tel" id="tel" name="tel" placeholder="0000-000-000" style="width: 358px;"><br>
+        </div>
+        <div>
+            <del><label for="subscription">訂閱:</label></del>
+            <input type="checkbox" id="subscription" name="subscription"><br>
+        </div>
+        <div>
+            <label for="appendix">附件:</label>
+            <input type="file" id="appendix" value="點選加入附件" name="appendix"><br>
+        </div>
+        <div>
+            <label for="introduction">自我介紹:</label><br>
+            <textarea id="introduction" name="introduction" rows="15" cols="52" placeholder="請輸入內文"
+                style="text-align: center"></textarea><br>
+        </div>
+        <div>
+            <a href="網頁.html">
+                <input type="submit" value="送出" style="border-radius: 15px">
+            </a>
+
+
+        </div>
+    </div>
+        <p style="position:absolute; top: 98%; left: 0;">
+            <small>
+                <abbr title="https://www.youtube.com/watch?v=dQw4w9WgXcQ">The WB made by 20240308</abbr>
+            </small>
+        </p>
+</body>
 </html>
