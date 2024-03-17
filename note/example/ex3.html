@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ex3</title>
+    </head>
+    <body>
+        <p id="ex1"></p>
+        <p id="ex2"></p>
+        <script>
+            var strlist=["apple","orange","banana"];
+            var strarray="";
+            for(let i=0;i<3;i++)
+                strarray+="strList["+i+"]="+strlist[i]+"<br>";
+            document.getElementById("ex1").innerHTML=strlist;
+            document.getElementById("ex2").innerHTML=strarray;
+        </script>
+    </body>
+</html>
