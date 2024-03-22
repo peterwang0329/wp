@@ -6,8 +6,8 @@ function gradient(f, p){    //f為方程式,p為座標
         p[i]+=h;
         let j=f(p);
         p[i]-=h;
-        graf[i] =(j-f(p))/h;   //graf為梯度 公式: graf = lim(f(x+h)-f(x))/h ,即 x 的偏微分,若有y,則將 x 改為 y 即可
-        
+        graf[i] =(j-f(p))/h;   
+        //graf為梯度 公式: graf = lim(f(x+h,y,z)-f(x,y,z))/h ,即 x 的偏微分,若是y,則將 h 改到 y (lim(f(x,y+h,z)-f(x,y,z))/h)即可
     }
     return graf;
 }
