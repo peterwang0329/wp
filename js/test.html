@@ -1,0 +1,19 @@
+<html>
+<body>
+<button onclick="job1()">Button1</button>
+<script>
+function job1() {
+    width += 10
+    b.style = `position:${position};left:${left};top:${top1};width:${width};height:${height}`
+}
+
+let width = 100
+let height = 100
+let left = 20
+let top1 = 30
+let position = 'absolute'
+let b = document.querySelector('button')
+b.style = `position:${position};width:${width};height:${height};left:${left};top:${top1}`
+</script>
+</body>
+</html>
