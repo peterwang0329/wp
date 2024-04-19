@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <textarea id="text" rows="15" cols="52" placeholder="請輸入內文"></textarea><br>
+    <input type="text" id="sha">
+    <script src="SHA256.js"></script>
+    <script>
+        // hash('foo').then((hex) => console.log(hex));
+        async function main() {
+            var text = document.getElementById('text')
+            let textvalue = text.value;
+            let hex = await hash(textvalue)
+            document.getElementById('sha').value = hex;
+            console.log(hex)
+        }
+
+        main()
+    </script>
+</body>
+
+</html>
