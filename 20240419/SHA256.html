@@ -11,7 +11,9 @@
 </head>
 
 <body>
+    <h1>SHA256 HEX</h1>
     <textarea id="text" rows="15" cols="56" placeholder="請輸入內文"></textarea><br>
+    <p>HEX:</p>
     <input type="text" id="sha" disabled>
     <script src="SHA256.js"></script>
     <script>
@@ -23,7 +25,7 @@
         }
 
         main()
-        
+
         document.getElementById('text').addEventListener('input', async function() {
             let text = document.getElementById('text').value;
             let hex = await hash(text);
