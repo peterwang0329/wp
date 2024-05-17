@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    background: #eee;
+    display: block;
+    margin: auto;
+}
+button{
+    display: block;
+    width: 10vh;
+    height: 5vh;
+    margin: 2vh auto;
+}
+div{
+    margin: 5% auto;
+}

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <canvas id="mycanvas" width="600" height="500"></canvas>
+        <div class="container">
+            <button id="button_big" onclick="big()">Bigger</button>
+            <button id="button_start" onclick="game()">Start</button>
+            <button id="button_small" onclick="small()">smaller</button>
+        </div>
+        <div>
+            <input type="range" min="0" max="255" value="0" class="slider" id="redRange">
+            <input type="range" min="0" max="255" value="0" class="slider" id="greenRange">
+            <input type="range" min="0" max="255" value="0" class="slider" id="blueRange">
+        </div>
+    </div>
+    <script src="action.js"></script>
+</body>
+
+</html>

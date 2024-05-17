@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    background: #eee;
+    display: block;
+    margin: auto;
+}
+button{
+    display: block;
+    width: 10vh;
+    height: 5vh;
+    margin: 2vh auto;
+}
+div{
+    margin: 5% auto;
+}
+.container {
+    display: grid;
+    grid-auto-flow: column; /* 横向排列 */
+   /* gap: 1vh; /* 可选，设置元素间的间距 */
+}
+.slider-container {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}

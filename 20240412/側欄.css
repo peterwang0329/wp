@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:beige;
+}
+#sidebar{
+    width: 10vh;
+    height: 10vh;
+    background-color:rgb(225, 223, 194);
+    transition: height 1s,width 1s;
+}
+a{
+    display: none;
+    position: absolute;
+    transition: height 1s,width 1s;
+}
+.div_hovered { /* 默认情况下的悬停样式 */
+    height: 100vh;
+    width: 20vh;
+}
+.a_hovered{
+    display: block;
+}
+/*
+*{
+    margin: 0;
+    padding: 0;
+    background-color:beige;
+}
+div{
+    width: 10vh;
+    height: 10vh;
+    background-color:rgb(225, 223, 194);
+    transition: height 1s,width 1s;
+}
+div:hover{
+    height: 100vh;
+    width: 20vh;
+}
+a{
+    position: absolute;
+    font-size: 0;
+    background-color:rgb(225, 223, 194);
+    transition: font-size 1s;
+}
+a.hover{
+    font-size: 20;
+}
+#sidebar.div_hovered a{  默认情况下的悬停样式 
+    display: block;
+}*/
