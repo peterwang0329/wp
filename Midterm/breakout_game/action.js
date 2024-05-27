@@ -1,97 +1,80 @@
 var canva = document.getElementById("mycanvas");
 var ctx = canva.getContext("2d");   //建立 ctx 變數儲存"2D 渲染環境"，ctx 變數實際拿來繪製 Canvas 的工具。
 
-function game(){
-    let interval = setInterval(draw,10); /*毫秒*/  
-    document.getElementById("button_start").innerHTML = "speed up";
+function game() {
+    var interval = setInterval(draw, 10); /*毫秒*/
+    var interval2 = setInterval(speed, 1000); /*毫秒*/
+    document.getElementById("button_start").style.display = "none";
+    //document.addEventListener("mousemove", mouseMoveHandler, false);
     /*document.getElementById("button_start").disabled = true;*/
 }
 
+var listen = true;
+var time = 500;
 
-function draw(){
-    ctx.clearRect(0,0,canva.width,canva.height); /*清除軌跡*/    
-    ball();
-    paddle();
-    if(x + ballR >= canva.width || x - ballR <= 0) {
-        dx = -dx;
+function reload() {
+    if (time % 100 == 0) {
+        ctx.clearRect(0, 0, canva.width, canva.height);
+        drawGameover();
     }
-    if(y - ballR <= 0) {
-        dy = -dy;
-    } 
-    else if(y + ballR >= canva.height-paddleHeight-PaddleToCanva 
-        && y + ballR <= canva.height-PaddleToCanva) {
-        // 检查是否碰到paddle
-        if(x > move && x < move + paddleWidth) {
-            dy = -dy;
-        } 
+    time--;
+    if (time <= 0) {
+        time = 500;
+        listen = true;
+        x = canva.width / 2;
+        y = canva.height - 80;
+        do {
+            dx = Math.floor(Math.random() * (2 - (-2) + 1)) + (-2);//修改一下速度和反彈角度
+            dy = Math.floor(Math.random() * (2 - (-2) + 1)) + (-2);
+        } while ((dx > 1 || dx < -1) && (dy > 1 || dy < -1));
+        score = 0;
+        move = (canva.width - paddleWidth) / 2;
+        for (let c = 0; c < brickColumnCount; c++) {
+            for (let r = 0; r < brickRowCount; r++) {
+                bricks[c][r].status = 1;
+            }
+        }
     }
-    else if(y+ ballR >= canva.height){
-        alert("Game over");
-        document.location.reload();
-        clearInterval(interval);
-    }
-    x += dx;
-    y += dy;
-}
-var x = canva.width /2;
-var y = canva.height -80;
-var dx = 2;
-var dy = -2;
-var ballR = 10;
-var PaddleToCanva = 50;
-
-function ball(){
-    ctx.beginPath();
-    ctx.arc(x, y, ballR, 0, Math.PI*2, false);
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.closePath();
 }
 
-const paddleHeight = 10;
-const paddleWidth = 75;
-let move = (canva.width - paddleWidth) / 2;
-
-function paddle(){
-    ctx.beginPath();
-    ctx.rect(move,canva.height-paddleHeight-PaddleToCanva,paddleWidth,paddleHeight);
-    ctx.fillStyle ="#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    if(right){
-        move += 4;
-        move = Math.min(move+4,canva.width - paddleWidth);
-    }
-    else if(left){
-        move -= 4;
-        move = Math.max(move-4,0);
-    }
+function speed() {
+    dx = dx + 0.1;
+    dy = dy + 0.1;
 }
 
 let right = false;
 let left = false;
 
-document.addEventListener("keydown", keyDown,false);
-document.addEventListener("keyup", keyUp,false);
+document.addEventListener("keydown", keyDown, false);
+document.addEventListener("keyup", keyUp, false);
 
-function keyDown(e){
-    if(e.key === "Right" || e.key === "ArrowRight")
+function keyDown(e) {
+    if (e.key === "Right" || e.key === "ArrowRight")
         right = true;
-    else if (e.key === "Left" || e.key === "ArrowLeft")    
+    else if (e.key === "Left" || e.key === "ArrowLeft")
         left = true;
 }
-function keyUp(e){
-    if(e.key === "Right" || e.key === "ArrowRight")
+function keyUp(e) {
+    if (e.key === "Right" || e.key === "ArrowRight")
         right = false;
-    else if (e.key === "Left" || e.key === "ArrowLeft")    
+    else if (e.key === "Left" || e.key === "ArrowLeft")
         left = false;
 }
 
-const brickRowCount = 3;
-const brickColumnCount = 5;
-const brickWidth = 75;
-const brickHeight = 20;
-const brickPadding = 10;
-const brickOffsetTop = 30;
-const brickOffsetLeft = 30;
+function movekey() {
+    if (right) {
+        move += 4;
+        move = Math.min(move + 4, canva.width - paddleWidth);
+    }
+    else if (left) {
+        move -= 4;
+        move = Math.max(move - 4, 0);
+    }
+}
 
+/*function mouseMoveHandler(e) {
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}*/
