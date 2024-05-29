@@ -23,11 +23,10 @@ function reload() {
         listen = true;
         x = canva.width / 2;
         y = canva.height - 80;
-        do {
-            dx = Math.floor(Math.random() * (2 - (-2) + 1)) + (-2);//修改一下速度和反彈角度
-            dy = Math.floor(Math.random() * (2 - (-2) + 1)) + (-2);
-        } while ((dx > 1 || dx < -1) && (dy > 1 || dy < -1));
+        dx = 2;//修改一下速度和反彈角度
+        dy = Math.random() * ((-3)+(-2)) + (-2);
         score = 0;
+        message = "You lose! try again";
         move = (canva.width - paddleWidth) / 2;
         for (let c = 0; c < brickColumnCount; c++) {
             for (let r = 0; r < brickRowCount; r++) {

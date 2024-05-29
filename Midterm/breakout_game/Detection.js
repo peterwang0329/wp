@@ -7,30 +7,35 @@ function collisionDetection() {
     for (let c = 0; c < brickColumnCount; c++) {
         for (let r = 0; r < brickRowCount; r++) {
             var b = bricks[c][r];
-            if (x > b.x - ballR && x < b.x + brickWidth + ballR 
-                && y > b.y - ballR && y < b.y + brickHeight + ballR 
-                && b.status == 1)
-                {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                }
-                if (score == brickRowCount * brickColumnCount)
-                    win();
+            if (x > b.x - ballR && x < b.x + brickWidth + ballR
+                && y > b.y - ballR && y < b.y + brickHeight + ballR
+                && b.status == 1) {
+                dy = -dy;
+                b.status = 0;
+                score++;
+            }
+            if (score == brickRowCount * brickColumnCount) {
+                win();
+                reload();
+            }
         }
     }
     if (x + ballR >= canva.width || x - ballR <= 0) {
         dx = -dx;
     }
-    if (y - ballR  <= 0) {
+    if (y - ballR <= 0) {
         dy = -dy;
     }
     else if (y + ballR >= canva.height - paddleHeight - PaddleToCanva
-        && y + ballR <= canva.height - PaddleToCanva ) {
+        && y + ballR <= canva.height - PaddleToCanva) {
         // 检查是否碰到paddle
         if (x > move && x < move + paddleWidth) {
-            if(dy>0)
-                dy = -dy;
+            if (dy > 0)
+                dy = -(Math.random() * (3 - 2) + 2);
+            if (dx > 0)
+                dx = Math.random() * (3 - 2) + 2;
+            else
+                dx = -(Math.random() * (3 - 2) + 2);
         }
     }
     else if (y + ballR >= canva.height) {
@@ -39,9 +44,10 @@ function collisionDetection() {
     }
 }
 
-var message = "";
+var message = "You lose! try again";
 
-function win(){
-    message = "You win";
+function win() {
+    message = "You win!";
+    time = 1000;
     listen = false;
 }

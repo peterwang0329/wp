@@ -6,6 +6,7 @@ function draw() {
         ball();
         paddle();
         brick();
+        Tips();
         drawScore();
         collisionDetection();
         x += dx;
@@ -34,7 +35,7 @@ function ball() {
 ex:obj.a = 2; // 合法：修改對象的属性
    obj = { a: 3 }; // 非法：重新赋值整個對象*/
 const paddleHeight = 10;
-const paddleWidth = 75;
+const paddleWidth = 80;
 
 function paddle() {
     ctx.beginPath();
@@ -45,12 +46,44 @@ function paddle() {
     movekey();
 }
 
+var tips_time = 300;
+
+function Tips() {
+    if(tips_time % 50 == 0 || tips_time <= 0){}
+    else{
+    ctx.fillText("Press[][]", 8, 20);
+    ctx.beginPath();
+    ctx.moveTo(50, 380);
+    ctx.lineTo(80, 360);
+    ctx.lineTo(80, 370);
+    ctx.lineTo(150, 370);
+    ctx.lineTo(150, 390);
+    ctx.lineTo(80, 390);
+    ctx.lineTo(80, 400);
+    ctx.fillStyle = "rgba(0, 149, 221, 0.5)";
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.moveTo(canva.width - 50, 380);
+    ctx.lineTo(canva.width - 80, 360);
+    ctx.lineTo(canva.width - 80, 370);
+    ctx.lineTo(canva.width - 150, 370);
+    ctx.lineTo(canva.width - 150, 390);
+    ctx.lineTo(canva.width - 80, 390);
+    ctx.lineTo(canva.width - 80, 400);
+    ctx.fillStyle = "rgba(0, 149, 221, 0.5)";
+    ctx.fill();
+    ctx.closePath();
+    }
+    tips_time--;
+}
+
 const brickRowCount = 6;
 const brickColumnCount = 9;
 const brickWidth = 50;
 const brickHeight = 20;
 const brickPadding = 10;
-const brickOffsetTop = 30;
+const brickOffsetTop = 45;
 const brickOffsetLeft = 30;
 
 const bricks = [];
@@ -89,6 +122,6 @@ function drawScore() {
 function drawGameover() {
     ctx.font = "32px Arial";
     ctx.fillStyle = "#0095DD";
-    //ctx.fillText("You Win!");
+    ctx.fillText(message ,canva.width/2-110 ,canva.height/2-50);
     ctx.fillText("reload in " + time/100 + "s",canva.width/2-75, canva.height/2);
 }
