@@ -29,14 +29,23 @@ function collisionDetection() {
     else if (y + ballR >= canva.height - paddleHeight - PaddleToCanva
         && y + ballR <= canva.height - PaddleToCanva) {
         // 检查是否碰到paddle
-        if (x > move && x < move + paddleWidth) {
+        if (x + ballR > move-4 && x + ballR < move + paddleWidth+4 
+            &&y + ballR >= canva.height - paddleHeight - PaddleToCanva
+            && y + ballR <= canva.height - paddleHeight - PaddleToCanva + 10) {
             if (dy > 0)
                 dy = -(Math.random() * (3 - 2) + 2);
             if (dx > 0)
-                dx = Math.random() * (3 - 2) + 2;
+                dx = Math.random() * (2.5 - 2) + 2;
             else
-                dx = -(Math.random() * (3 - 2) + 2);
+                dx = -(Math.random() * (2.5 - 2) + 2);
         }
+        if((x + ballR >= move && x + ballR <= move + 4 && dx > 0)
+            ||(x + ballR >= move + paddleWidth -4 && x + ballR <= move + paddleWidth && dx < 0)){
+                if(dx > 0)  
+                    dx = -(Math.random() * (2.5 - 2) + 2);
+                else
+                    dx = Math.random() * (2.5 - 2) + 2;
+            }
     }
     else if (y + ballR >= canva.height) {
         listen = false;

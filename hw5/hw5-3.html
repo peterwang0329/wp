@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            button{
+                width: 80px;
+                height: 50px;
+                position: absolute;
+                left: 300px;
+                top: 300px;
+            }
+            #text{
+                margin-left: 45%;
+                font-size: 28;
+            }
+            a{
+                margin-left: 50%;
+                font-size: 28;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a id="text">try to get 10 point</a>
+        </div>
+        <script>
+            var button = document.createElement("button");
+            button.innerHTML = "Start";
+            document.body.appendChild(button);
+            var a1 = document.createElement("a");
+            a1.innerHTML = "Score:" + 0;
+            document.body.appendChild(a1);
+            a1.style.left = 20 + "px";
+            var button_left = 300;
+            var dx = Math.random() * (1 - 0.5) + 0.5;
+            var button_top = 300;
+            var dy = Math.random() * (1 - 0.5) + 0.5;
+            var speed = 0.5;
+            var score = 0;
+            var interval = null;
+            button.onclick = function () {
+            if(interval == null) interval = setInterval(button_move,10);
+            if(interval != null) {
+                speed += 0.1; 
+                score++; 
+                a1.innerHTML = "Score:" + score;
+            }
+            if(button.innerHTML == "Start") button.innerHTML = "click me!";
+            };
+            function button_move() {
+                if(score == 10){
+                    clearInterval(interval);
+                    interval = null;
+                    alert("You win!");
+                    document.location.reload();
+                }
+                if(speed < 8)
+                    speed += 0.01;
+                for(let i=0;i<speed;i++){
+                    if(button_left >= window.innerWidth - 80)
+                        dx = -(Math.random() * (1.5 - 0.5) + 0.5);
+                    else if(button_left <= 0)
+                        dx = Math.random() * (1.5 - 0.5) + 0.5;
+                    if(button_top >= window.innerHeight - 50)
+                        dy = -(Math.random() * (1.5 - 0.5) + 0.5);
+                    else if( button_top <= 70)
+                        dy = Math.random() * (1.5 - 0.5) + 0.5;
+                    button_left = button_left + dx;
+                    button_top = button_top + dy;
+                }
+                    button.style.left = button_left + "px";
+                    button.style.top = button_top + "px";
+            }
+        </script>
+    </body>
+</html>

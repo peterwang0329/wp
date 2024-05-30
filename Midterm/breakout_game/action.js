@@ -10,7 +10,7 @@ function game() {
 }
 
 var listen = true;
-var time = 500;
+var time = 300;
 
 function reload() {
     if (time % 100 == 0) {
@@ -19,11 +19,11 @@ function reload() {
     }
     time--;
     if (time <= 0) {
-        time = 500;
+        time = 300;
         listen = true;
         x = canva.width / 2;
         y = canva.height - 80;
-        dx = 2;//修改一下速度和反彈角度
+        //dx = -dx;//修改一下速度和反彈角度
         dy = Math.random() * ((-3)+(-2)) + (-2);
         score = 0;
         message = "You lose! try again";
@@ -46,17 +46,18 @@ let left = false;
 
 document.addEventListener("keydown", keyDown, false);
 document.addEventListener("keyup", keyUp, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDown(e) {
-    if (e.key === "Right" || e.key === "ArrowRight")
+    if (e.key === "Right" || e.key === "ArrowRight" || e.key === "d" ||e.key === "D")
         right = true;
-    else if (e.key === "Left" || e.key === "ArrowLeft")
+    else if (e.key === "Left" || e.key === "ArrowLeft" || e.key === "a" ||e.key === "A")
         left = true;
 }
 function keyUp(e) {
-    if (e.key === "Right" || e.key === "ArrowRight")
+    if (e.key === "Right" || e.key === "ArrowRight" || e.key === "d" ||e.key === "D")
         right = false;
-    else if (e.key === "Left" || e.key === "ArrowLeft")
+    else if (e.key === "Left" || e.key === "ArrowLeft" || e.key === "a" ||e.key === "A")
         left = false;
 }
 
@@ -71,9 +72,9 @@ function movekey() {
     }
 }
 
-/*function mouseMoveHandler(e) {
+function mouseMoveHandler(e) {
   var relativeX = e.clientX - canvas.offsetLeft;
-  if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth / 2;
+  if (relativeX > 0 && relativeX < canva.width) {
+    move = relativeX - paddleWidth / 2;
   }
-}*/
+}

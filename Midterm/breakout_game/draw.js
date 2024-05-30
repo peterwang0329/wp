@@ -51,7 +51,6 @@ var tips_time = 300;
 function Tips() {
     if(tips_time % 50 == 0 || tips_time <= 0){}
     else{
-    ctx.fillText("Press[][]", 8, 20);
     ctx.beginPath();
     ctx.moveTo(50, 380);
     ctx.lineTo(80, 360);
@@ -63,6 +62,8 @@ function Tips() {
     ctx.fillStyle = "rgba(0, 149, 221, 0.5)";
     ctx.fill();
     ctx.closePath();
+    ctx.fillText("Press[A]or[←]", 50, 350);
+    ctx.fillText("Press[D]or[→]",canva.width - 150, 350);
     ctx.beginPath();
     ctx.moveTo(canva.width - 50, 380);
     ctx.lineTo(canva.width - 80, 360);

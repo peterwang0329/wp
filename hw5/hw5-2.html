@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            button{
+                width: 80px;
+                height: 50px;
+                position: absolute;
+                left: 0;
+            }
+        </style>
+    </head>
+<body>
+    <script>
+        var button = document.createElement("button");
+        button.innerHTML = "click me!";
+        document.body.appendChild(button);
+        var left = 0;
+        var vmleft = 0;
+        var move = 0;
+        var speed = 0.05;
+        var interval = null;
+        button.onclick = function () {
+            if(interval == null) interval = setInterval('button_speed()',10);
+            if(button.innerHTML == "click me!") button.innerHTML = "speed up!";
+        };
+        function button_speed(){
+            move += speed;
+            if(move >= 10){
+                clearInterval(interval);
+                interval = null;
+                move = 10;
+                left = left + move;
+                button.style.left = left;
+                move = 0;
+                speed += 0.05;
+            }
+            else{
+                vmleft = left + move;
+                button.style.left = vmleft;
+            }
+        }
+    </script>
+</body>
+</html>

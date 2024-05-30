@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 12px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button1" onclick="button_click()">Don't touch me!</button>
+    <script>
+        var button = document.getElementById("button1");
+        var size = 12;
+        function button_click() {
+            button.style.width = (button.offsetWidth + 10) + "px";
+            button.style.height = (button.offsetHeight + 10) + "px";
+            size++;
+            button.style.fontSize = size + "px";
+            if (size == 20)
+                button.innerHTML = "I say!<br>don't touch me!";
+            if (size == 30)
+                button.innerHTML = "￣へ￣";
+            if (size == 50)
+                button.innerHTML = "You're so boring";
+            if (size == 60)
+                button.innerHTML = "You are a Freak<br>┗|｀O′|┛";
+            if (size == 80)
+                button.innerHTML = "I'm going to explode";
+            if (size == 95)
+                button.innerHTML = "No!(°ロ°)";
+            if (size == 100) {
+                button.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
