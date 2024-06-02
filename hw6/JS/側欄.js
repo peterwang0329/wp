@@ -1,4 +1,3 @@
-let click = true;
 let sidebar = document.getElementById("sidebar");
 let a = document.querySelectorAll("a");
 
@@ -12,7 +11,7 @@ function toggle() {
     }
     else{
         sidebar.style.width = 18 + "vh";
-        sidebar.style.height = 100 +"vh";
+        sidebar.style.height = 99 +"vh";
         a.forEach(a =>{
             a.setAttribute('style','display: block;');
             a.addEventListener('mouseover',() => {

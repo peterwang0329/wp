@@ -4,6 +4,7 @@ var ctx = canva.getContext("2d");   //建立 ctx 變數儲存"2D 渲染環境"�
 function game() {
     let interval = setInterval(draw, 10); /*毫秒*/
     document.getElementById("button_start").innerHTML = "speed up";
+    rad();
     updateColor();
 }
 var x = canva.width / 2;
@@ -64,13 +65,31 @@ function small() {
     ballR--;
 }
 
+var random_number = Math.floor(Math.random() * (3 - 1)) + 1;
+var x1,x2,x3;
+function rad() {
+    if(random_number == 1){
+        x1 = 2;
+        x2 = 3;
+        x3 = 5;
+    }
+    else if(random_number == 2){
+        x1 = 5;
+        x2 = 2;
+        x3 = 3;
+    }
+    else if(random_number == 3){
+        x1 = 3;
+        x2 = 5;
+        x3 = 2;
+    }    
+}
+
 const redRange = document.getElementById('redRange');
 const greenRange = document.getElementById('greenRange');
 const blueRange = document.getElementById('blueRange');
 
-var redValue = 0;
-var greenValue = 0;
-var blueValue = 0;
+var redValue = 0 ,greenValue = 0 ,blueValue = 0;
 var redIncrement = true, greenIncrement = true, blueIncrement = true;
 
 function updateColor() {
@@ -79,7 +98,7 @@ function updateColor() {
         redValue = redValue + Math.floor(Math.random() * (10 - 1)) + 1;
         if (redValue >= 255) redIncrement = false;
     } else {
-        redValue = redValue - 2;
+        redValue = redValue - x1;
         if (redValue <= 0) redIncrement = true;
     }
 
@@ -88,7 +107,7 @@ function updateColor() {
         greenValue =greenValue + Math.floor(Math.random() * (5 - 1)) + 1;
         if (greenValue >= 255) greenIncrement = false;
     } else {
-        greenValue = greenValue - 5;
+        greenValue = greenValue - x2;
         if (greenValue <= 0) greenIncrement = true;
     }
 
@@ -97,7 +116,7 @@ function updateColor() {
         blueValue = blueValue + Math.floor(Math.random() * (5 - 2)) + 2;
         if (blueValue >= 255) blueIncrement = false;
     } else {
-        blueValue = blueValue - 3;
+        blueValue = blueValue - x3;
         if (blueValue <= 0) blueIncrement = true;
     }
 

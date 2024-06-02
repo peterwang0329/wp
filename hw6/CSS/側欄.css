@@ -1,24 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color:beige;
+    background-color: beige;
 }
 
-div{
+.menu {
     width: 10vh;
     height: 7vh;
-    background-color:rgb(225, 223, 194);
+    background-color: rgb(225, 223, 194);
     position: fixed; /*使其置於網頁頂部*/
-    position: absolute; /*使內部的絕對定位成效*/
     overflow: hidden; /*防止文字溢出*/
     display: flex; /*使其成為一個彈性容器，方便使用 flex-direction 和 align-items*/
     flex-direction: column; /*將內容物垂直排列*/
     align-items: center; /*將內容物置中*/
     padding-top: 5px; 
-    transition: height 0.5s,width 1s;
+    transition: height 0.5s, width 1s;
 }
 
-h3{
+h3 {
     font-size: 36px;
     font-weight: bold;
     background-color: rgb(225, 223, 194);
@@ -30,33 +29,34 @@ a{
     text-align: center;
     font-family: sans-serif;
     text-decoration: none;
-    background-color:rgb(225, 223, 194);
+    background-color: rgb(225, 223, 194);
     position: relative;
     color: rgb(28, 28, 28);
     display: none;
     padding: 10px;
-    transition: font-size 1s,transform 1s ,background-color 1s;
+    transition: padding 2s;
+    transition: font-size 1s, transform 1s, background-color 1s;
     transform: scale(1); 
 }
 
-div:hover{
+.menu:hover {
     width: 18vh;
-    height: 100vh;
+    height: 99vh;
 }
 
-div:hover a{
+.menu:hover a{
     display: block;
 }
 
-a:hover{
+a:hover {
     transform: scale(1.2);
-    background-color:rgb(198, 196, 172);
+    background-color: rgb(198, 196, 172);
 }
 
-.now{
+.now {
     font-weight: 900;
     font-size: 20px;
     /*cursor: none; 讓鼠標消失*/
     pointer-events: none;
-    background-color:rgb(188, 186, 162);
+    background-color: rgb(188, 186, 162);
 }

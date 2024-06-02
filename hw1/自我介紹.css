@@ -77,7 +77,7 @@ a:not(.link,.now) {
 
 .show:hover {
     width: 18vh;
-    height: 100vh;
+    height: 99vh;
 }
 
 .show:hover a {
