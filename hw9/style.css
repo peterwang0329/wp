@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: beige;
 }
 canvas {
     background: #eee;
@@ -16,7 +17,7 @@ button{
 .game{
     margin: 5% auto;
 }
-.container {
+.container { 
     display: flex;
     align-items: center; /*將內容物置中*/
     gap: 1vh; /* 可选，设置元素间的间距 */

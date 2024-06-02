@@ -17,7 +17,7 @@ var PaddleToCanva = 50;
 var max = 6;
 var min = 2;
 
-function draw() {
+function draw() { 
     ball();
     let random = Math.floor(Math.random() * (max - min)) + min;
     if (x + ballR >= canva.width) {
