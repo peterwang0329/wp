@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:beige;
+}
+
+div{
+    width: 10vh;
+    height: 7vh;
+    background-color:rgb(225, 223, 194);
+    position: fixed; /*使其置於網頁頂部*/
+    position: absolute; /*使內部的絕對定位成效*/
+    overflow: hidden; /*防止文字溢出*/
+    display: flex; /*使其成為一個彈性容器，方便使用 flex-direction 和 align-items*/
+    flex-direction: column; /*將內容物垂直排列*/
+    align-items: center; /*將內容物置中*/
+    padding-top: 5px; 
+    transition: height 0.5s,width 1s;
+}
+
+h3{
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgb(225, 223, 194);
+}
+
+a{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color:rgb(225, 223, 194);
+    position: relative; /*使物件能跟容器一起調整排版*/
+    color: rgb(28, 28, 28);
+    display: none;
+    padding: 10px;
+    transition: font-size 1s,transform 1s ,background-color 1s;
+    transform: scale(1); 
+}
+
+.now{
+    font-weight: 900;
+    font-size: 20px;
+    /*cursor: none; 讓鼠標消失*/
+    pointer-events: none;
+    background-color:rgb(188, 186, 162);
+}
