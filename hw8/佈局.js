@@ -12,7 +12,7 @@ function toggle() {
         menu_link.forEach(menu_link => { menu_link.setAttribute('style', 'display: none;'); })
         flag = false;
     }
-    else {
+    else { 
         sidebar.style.width = "15%";
         interval = setInterval(() => {
             now.forEach(now => { now.setAttribute('style', 'display: block;'); })
