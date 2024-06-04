@@ -94,6 +94,14 @@ a{
     transform: scale(1); 
 }
 
+p{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 48px;
+}
+
 .now{
     font-weight: 900;
     font-size: 20px;
