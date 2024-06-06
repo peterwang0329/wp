@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header></header>
+<nav>
+    <select id="source">
+        <option value="Chinese">中文</option>
+        <option value="Japanese">日文</option>
+        <option value="Engilsh">英文</option>
+    </select>
+    <label>→</label>
+    <select id="target">
+        <option value="Chinese">中文</option>
+        <option value="Japanese">日文</option>
+        <option value="Engilsh">英文</option>
+    </select>
+</nav>
+<aside></aside>
+<main>
+    <textarea id="question" placeholder="請輸入你要翻譯的內容..."></textarea>
+    <button onclick="chat()">送出問題</button>
+    <div id="response" placeholder="翻譯"></div>    
+</main>
+<footer></footer>
+<script src="main.js"></script>
+</body>
+</html>
