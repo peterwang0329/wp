@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: beige;
 }
 canvas {
     background: #eee;
@@ -13,6 +14,76 @@ button{
     height: 5vh;
     margin: 2vh auto;
 }
-div{
+
+.game{
     margin: 5% auto;
+}
+
+
+.menu {
+    width: 10vh;
+    height: 7vh;
+    background-color: rgb(225, 223, 194);
+    position: fixed;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px; 
+    transition: height 0.5s, width 1s;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgb(225, 223, 194);
+}
+
+a{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: rgb(225, 223, 194);
+    position: relative;
+    color: rgb(28, 28, 28);
+    display: none;
+    padding: 10px;
+    transition: padding 2s;
+    transition: font-size 1s, transform 1s, background-color 1s;
+    transform: scale(1); 
+}
+
+.menu:hover {
+    width: 18vh;
+    height: 99vh;
+}
+
+.menu:hover a{
+    display: block;
+}
+
+a:hover {
+    transform: scale(1.2);
+    background-color: rgb(198, 196, 172);
+}
+
+.now {
+    font-weight: 900;
+    font-size: 20px;
+    pointer-events: none;
+    background-color: rgb(188, 186, 162);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+.item1{
+    grid-column: 1/ span 1;
+}
+.item2{
+    grid-column: 2;
 }

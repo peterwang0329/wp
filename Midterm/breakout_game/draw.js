@@ -8,6 +8,7 @@ function draw() {
         brick();
         Tips();
         drawScore();
+        drawLives();
         collisionDetection();
         x += dx;
         y += dy;
@@ -120,9 +121,18 @@ function drawScore() {
     ctx.fillText("Score: " + score, 8, 20);
 }
 
+function drawLives() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Lives: "+ lives, canva.width-65, 20);
+  }
+
 function drawGameover() {
     ctx.font = "32px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText(message ,canva.width/2-110 ,canva.height/2-50);
+    if(message == "You lose! try again")
+        ctx.fillText(message ,canva.width/2-110 ,canva.height/2-50);
+    else if(message == "You win!")
+        ctx.fillText(message ,canva.width/2-70 ,canva.height/2-50);
     ctx.fillText("reload in " + time/100 + "s",canva.width/2-75, canva.height/2);
 }

@@ -26,6 +26,7 @@ function reload() {
         //dx = -dx;//修改一下速度和反彈角度
         dy = Math.random() * ((-3)+(-2)) + (-2);
         score = 0;
+        lives = 3;
         message = "You lose! try again";
         move = (canva.width - paddleWidth) / 2;
         for (let c = 0; c < brickColumnCount; c++) {

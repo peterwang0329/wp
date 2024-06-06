@@ -1,6 +1,7 @@
 var canva = document.getElementById("mycanvas");
 
 var score = 0;
+var lives = 3;
 let move = (canva.width - paddleWidth) / 2;
 
 function collisionDetection() {
@@ -29,8 +30,8 @@ function collisionDetection() {
     else if (y + ballR >= canva.height - paddleHeight - PaddleToCanva
         && y + ballR <= canva.height - PaddleToCanva) {
         // 检查是否碰到paddle
-        if (x + ballR > move-4 && x + ballR < move + paddleWidth+4 
-            &&y + ballR >= canva.height - paddleHeight - PaddleToCanva
+        if (x + ballR > move - 4 && x + ballR < move + paddleWidth + 4
+            && y + ballR >= canva.height - paddleHeight - PaddleToCanva
             && y + ballR <= canva.height - paddleHeight - PaddleToCanva + 10) {
             if (dy > 0)
                 dy = -(Math.random() * (3 - 2) + 2);
@@ -39,17 +40,27 @@ function collisionDetection() {
             else
                 dx = -(Math.random() * (2.5 - 2) + 2);
         }
-        if((x + ballR >= move && x + ballR <= move + 4 && dx > 0)
-            ||(x + ballR >= move + paddleWidth -4 && x + ballR <= move + paddleWidth && dx < 0)){
-                if(dx > 0)  
-                    dx = -(Math.random() * (2.5 - 2) + 2);
-                else
-                    dx = Math.random() * (2.5 - 2) + 2;
-            }
+        if ((x + ballR >= move && x + ballR <= move + 4 && dx > 0)
+            || (x + ballR >= move + paddleWidth - 4 && x + ballR <= move + paddleWidth && dx < 0)) {
+            if (dx > 0)
+                dx = -(Math.random() * (2.5 - 2) + 2);
+            else
+                dx = Math.random() * (2.5 - 2) + 2;
+        }
     }
     else if (y + ballR >= canva.height) {
-        listen = false;
-        reload();
+        lives--;
+        if (!lives) {
+            listen = false;
+            reload();
+        }
+        else {
+            x = canva.width / 2;
+            y = canva.height - 30;
+            if(dy >= 0)
+                dy = dy = -(Math.random() * (3 - 2) + 2);
+            paddleX = (canva.width - paddleWidth) / 2;
+        }
     }
 }
 
