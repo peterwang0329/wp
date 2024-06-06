@@ -35,7 +35,7 @@ async function groqChat(q,language) {
 async function chat() {
     let source = document.getElementById('source')
     let target = document.getElementById('target')
-    let language = 'Translate from' + source.value + ' to ' + target.value
+    let language = 'Translate from ' + source.value + ' to ' + target.value
     let qNode = document.querySelector('#question')
     let responseNode = document.querySelector('#response')
     responseNode.innerText = '翻譯中，請稍等幾秒鐘 ...'
