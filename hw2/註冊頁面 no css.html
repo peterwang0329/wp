@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="5,https://github.com/peterwang0329">
+    <title>註冊頁面</title>
+</head>
+
+<body bgcolor="#cccccc">
+    <header>註冊頁面</header>
+    <hr>
+    <div>
+        <div>
+            <a href="https://github.com/peterwang0329/wp">主頁面</a>
+            <a href="https://peterwang0329.github.io/wp/hw1/自我介紹.html">自我介紹</a>
+            <a href="https://peterwang0329.github.io/wp/hw2/註冊頁面.html">註冊頁面</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw3">JavaScript 練習
+                1</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw4">JavaScript 練習
+                2</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/hw5">DOM</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/hw6">側欄</a>
+            <a href="https://peterwang0329.github.io/wp/hw7/SHA256.html">SHA256</a>
+            <a href="https://peterwang0329.github.io/wp/hw8/佈局.html">佈局</a>
+            <a href="https://peterwang0329.github.io/wp/hw9/index.html">繪圖</a>
+            <a href="https://peterwang0329.github.io/wp/hw10/index.html">groq</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/hw11/denoApiService">server註解</a>
+        </div>
+        <div>
+            <div>
+                <label for="name">姓名:</label><br>
+                <input type="text" id="name" name="name" required><br>
+            </div>
+            <div>
+                <label for="passname">帳號:</label><br>
+                <input type="text" id="passname" name="passname" required><br>
+            </div>
+            <div>
+                <label for="password">密碼:</label><br>
+                <input type="text" id="password" name="password" required><br>
+            </div>
+            <div>
+                <label for="email">email:</label><br>
+                <input type="email" id="email" name="email"><br>
+            </div>
+            <div>
+                <label for="gender">性別:</label>
+                <form action="" required> <!--加action="" 變單選-->
+                    <input type="radio" name="gender" value="male">男
+                    <input type="radio" name="gender" value="female">女
+                    <input type="radio" name="gender" value="num">不願透露
+                </form>
+            </div>
+            <div>
+                <label for="birthday">生日:</label>
+                <input type="date" id="birthday" name="birthday"><br>
+            </div>
+            <div>
+                <label for="color">喜歡的顏色:</label>
+                <input type="color" id="color" name="color"><br>
+            </div>
+            <div>
+                <label for="blood">血型:</label>
+                <select id="blood" name="blood">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select><br>
+            </div>
+            <div>
+                <label for="tel">電話:</label>
+                <input type="tel" id="tel" name="tel" placeholder="0000-000-000" style="width: 358px;"><br>
+            </div>
+            <div>
+                <del><label for="subscription">訂閱:</label></del>
+                <input type="checkbox" id="subscription" name="subscription"><br>
+            </div>
+            <div>
+                <label for="appendix">附件:</label>
+                <input type="file" id="appendix" value="點選加入附件" name="appendix"><br>
+            </div>
+            <div>
+                <label for="introduction">自我介紹:</label><br>
+                <textarea id="introduction" name="introduction" rows="15" cols="52" placeholder="請輸入內文"
+                    style="text-align: center"></textarea><br>
+            </div>
+            <div>
+                <input type="submit" value="送出" style="border-radius: 15px">
+            </div>
+        </div>
+    </div>
+    <p style="position:absolute; top: 98%; left: 90%;">
+        <small>
+            <abbr title="https://www.youtube.com/watch?v=dQw4w9WgXcQ">The WB made by 20240308</abbr>
+        </small>
+    </p>
+</body>
+
+</html>
