@@ -27,15 +27,82 @@ textarea {
     padding: 10px;
 }
 
-div {
-    display:block;
-    width:100%;
-    margin:10px auto;
-    height: 200px;
-    padding: 10px;
-}
 
 #question {
     height: 5em;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+.menu {
+    width: 10vh;
+    height: 7vh;
+    background-color: rgb(225, 223, 194);
+    position: fixed; /*使其置於網頁頂部*/
+    overflow: hidden; /*防止文字溢出*/
+    display: flex; /*使其成為一個彈性容器，方便使用 flex-direction 和 align-items*/
+    flex-direction: column; /*將內容物垂直排列*/
+    align-items: center; /*將內容物置中*/
+    padding-top: 5px; 
+    transition: height 0.5s, width 1s;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgb(225, 223, 194);
+}
+
+a{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: rgb(225, 223, 194);
+    position: relative;
+    color: rgb(28, 28, 28);
+    display: none;
+    padding: 10px;
+    transition: padding 2s;
+    transition: font-size 1s, transform 1s, background-color 1s;
+    transform: scale(1); 
+}
+
+.menu:hover {
+    width: 18vh;
+    height: 99vh;
+}
+
+.menu:hover a{
+    display: block;
+}
+
+a:hover {
+    transform: scale(1.2);
+    background-color: rgb(198, 196, 172);
+}
+
+.now {
+    font-weight: 900;
+    font-size: 20px;
+    /*cursor: none; 讓鼠標消失*/
+    pointer-events: none;
+    background-color: rgb(188, 186, 162);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.item1{
+    grid-column: 1/ span 1;
+}
+.item2{
+    grid-column: 2;
+}
