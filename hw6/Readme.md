@@ -11,3 +11,6 @@
 個別使用CSS和JS做出可展開縮放的側欄
 >由ChatGPT提供未學習過的樣式的使用方法和效果，並自行變化應用於程式中
 >部分內容由ChatGPT優化或經ChatGPT指點
+
+
+→[回統整頁](https://peterwang0329.github.io/wp/index.html)
