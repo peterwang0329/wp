@@ -9,8 +9,10 @@
 - [原始碼](https://github.com/peterwang0329/wp/tree/master/hw6/JS)
 
 個別使用CSS和JS做出可展開縮放的側欄
->由ChatGPT提供未學習過的樣式的使用方法和效果，並自行變化應用於程式中
->部分內容由ChatGPT優化或經ChatGPT指點
+
+>由 ChatGPT 提供未學習過的樣式的使用方法和效果，並自行變化應用於程式中(完全理解後利用變化至程式中)
+
+>部分內容由 ChatGPT 進行 debug
 
 
 →[回統整頁](https://peterwang0329.github.io/wp/index.html)

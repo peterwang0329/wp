@@ -11,7 +11,7 @@ function toggle() {
     }
     else{
         sidebar.style.width = 40 + "vh";
-        sidebar.style.height = 99 +"vh";
+        sidebar.style.height = 99.5 +"vh";
         a.forEach(a =>{
             a.setAttribute('style','display: block;');
             a.addEventListener('mouseover',() => {
