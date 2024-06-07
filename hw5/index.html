@@ -10,7 +10,7 @@
         }
 
         .menu {
-            width: 18vh;
+            width: 40vh;
             height: 99vh;
             background-color: rgb(225, 223, 194);
             position: fixed;
@@ -52,7 +52,6 @@
         .now {
             font-weight: 900;
             font-size: 20px;
-            /*cursor: none; 讓鼠標消失*/
             pointer-events: none;
             background-color: rgb(188, 186, 162);
         }
@@ -62,10 +61,17 @@
 <body>
     <div class="menu">
         <h3>≡</h3>
-        <a href="https://peterwang0329.github.io/wp/index.html">回上頁</a>
-        <a href="https://peterwang0329.github.io/wp/hw6/CSS/側欄.html">側欄 CSS</a>
-        <a href="https://peterwang0329.github.io/wp/hw6/JS/側欄.html">側欄 JS</a>
+        <a href="https://peterwang0329.github.io/wp/hw5/hw5-1.html">按鈕按下去寬高都會變大 10px</a>
+        <a href="https://peterwang0329.github.io/wp/hw5/hw5-2.html">按鈕按下去會右移 10px</a>
+        <a href="https://peterwang0329.github.io/wp/hw5/hw5-3.html">一個會自己到處移動的按鈕</a>
+        <a href="https://peterwang0329.github.io/wp/index.html">統整頁面</a>
+        <a href="#" onclick="goback()">回上頁</a>
     </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

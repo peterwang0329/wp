@@ -40,7 +40,7 @@ a{
 }
 
 .menu:hover {
-    width: 18vh;
+    width: 30vh;
     height: 99vh;
 }
 
@@ -51,12 +51,4 @@ a{
 a:hover {
     transform: scale(1.2);
     background-color: rgb(198, 196, 172);
-}
-
-.now {
-    font-weight: 900;
-    font-size: 20px;
-    /*cursor: none; 讓鼠標消失*/
-    pointer-events: none;
-    background-color: rgb(188, 186, 162);
 }

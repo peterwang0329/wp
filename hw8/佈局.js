@@ -13,7 +13,7 @@ function toggle() {
         flag = false;
     }
     else {
-        sidebar.style.width = "15%";
+        sidebar.style.width = "18%";
         interval = setInterval(() => {
             now.forEach(now => { now.setAttribute('style', 'display: block;'); })
             menu_link.forEach(menu_link => { menu_link.setAttribute('style', 'display: block;'); })
@@ -21,4 +21,8 @@ function toggle() {
         }, 1000);
         flag = true;
     }
+}
+
+function goBack() {
+    window.history.back();
 }

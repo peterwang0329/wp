@@ -130,3 +130,8 @@ function updateColor() {
 redRange.addEventListener('input', updateColor);
 greenRange.addEventListener('input', updateColor);
 blueRange.addEventListener('input', updateColor);
+
+
+function goBack() {
+    window.history.back();
+}

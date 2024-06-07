@@ -10,7 +10,7 @@ function toggle() {
         flag = false;
     }
     else{
-        sidebar.style.width = 18 + "vh";
+        sidebar.style.width = 40 + "vh";
         sidebar.style.height = 99 +"vh";
         a.forEach(a =>{
             a.setAttribute('style','display: block;');
@@ -26,4 +26,8 @@ function toggle() {
         });
         flag = true;
     }
+}
+
+function goBack() {
+    window.history.back();
 }

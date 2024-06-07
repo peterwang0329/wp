@@ -49,8 +49,8 @@
         }
 
         .menu:hover {
-            width: 18vh;
-            height: 93vh;
+            width: 30vh;
+            height: 94vh;
         }
 
         .menu:hover a {
@@ -60,13 +60,6 @@
         a:hover {
             transform: scale(1.2);
             background-color: rgb(198, 196, 172);
-        }
-
-        .now {
-            font-weight: 900;
-            font-size: 20px;
-            pointer-events: none;
-            background-color: rgb(188, 186, 162);
         }
 
         .border {
@@ -118,20 +111,21 @@
     <div class="grid">
         <div class="menu item1">
             <h3>≡</h3>
-            <a href="https://github.com/peterwang0329/wp">主頁面</a>
+            <a href="https://peterwang0329.github.io/wp/index.html">統整頁面</a>
             <a href="https://peterwang0329.github.io/wp/hw1/自我介紹.html">自我介紹</a>
-            <a class="now" href="https://peterwang0329.github.io/wp/hw2/註冊頁面.html">註冊頁面</a>
-            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw3">JavaScript <br>練習
-                1</a>
-            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw4">JavaScript <br>練習
-                2</a>
-            <a href="https://github.com/peterwang0329/wp/tree/master/hw5">DOM</a>
-            <a href="https://github.com/peterwang0329/wp/tree/master/hw6">側欄</a>
+            <a href="https://peterwang0329.github.io/wp/hw2/index.html">註冊頁面</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw3">JavaScript 練習 1</a>
+            <a href="https://github.com/peterwang0329/wp/tree/master/js/hw4">JavaScript 練習 2</a>
+            <a href="https://peterwang0329.github.io/wp/hw5/index.html">DOM</a>
+            <a href="https://peterwang0329.github.io/wp/hw6/index.html">側欄</a>
             <a href="https://peterwang0329.github.io/wp/hw7/SHA256.html">SHA256</a>
             <a href="https://peterwang0329.github.io/wp/hw8/佈局.html">佈局</a>
             <a href="https://peterwang0329.github.io/wp/hw9/index.html">繪圖</a>
             <a href="https://peterwang0329.github.io/wp/hw10/index.html">groq</a>
             <a href="https://github.com/peterwang0329/wp/tree/master/hw11/denoApiService">server註解</a>
+            <a href="https://peterwang0329.github.io/wp/Midterm/breakout_game/index.html">Game</a>
+            <a href="https://github.com/peterwang0329/wp">我的主頁</a>
+            <a href="#" onclick="goback()">回上頁</a>
         </div>
         <div class="border item2">
             <div>
@@ -197,11 +191,16 @@
             </div>
         </div>
     </div>
-    <p style="position:absolute; top: 98%; left: 90%;">
+    <p style="position:absolute; top: 99%; left: 90%;">
         <small>
             <abbr title="https://www.youtube.com/watch?v=dQw4w9WgXcQ">The WB made by 20240308</abbr>
         </small>
     </p>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

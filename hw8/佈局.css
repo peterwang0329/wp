@@ -29,14 +29,14 @@
 }
 
 .item3{
-    width: 15%;
+    width: 18%;
     height: 100%;
     background-color:rgb(21, 3, 42);
     position: relative;
-    overflow: hidden; /*防止文字溢出*/
-    display: flex; /*使其成為一個彈性容器，方便使用 flex-direction 和 align-items*/
-    flex-direction: column; /*將內容物垂直排列*/
-    align-items: center; /*將內容物置中*/
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
     padding-top: 5px; 
     transition: height 0.5s,width 1s;
 }

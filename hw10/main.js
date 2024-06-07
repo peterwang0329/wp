@@ -38,3 +38,7 @@ async function chat() {
     let answer = await groqChat(qNode.value,language)
     responseNode.innerText = answer
 }
+
+function goBack() {
+    window.history.back();
+}
