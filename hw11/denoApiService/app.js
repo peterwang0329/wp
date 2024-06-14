@@ -14,8 +14,8 @@ router.post('/upload', uploadHandler)
 
 
 app.use(oakCors()); // Enable CORS for All Routes ,啟用CORS
-app.use(router.routes()) //
-app.use(router.allowedMethods())
+app.use(router.routes()) //註冊路由(ChatGPT)
+app.use(router.allowedMethods())//允許方法(ChatGPT)
 
 console.log('Server run at http://127.0.0.1:6789')  // 監聽伺服器回傳資料
 await app.listen({ port: 6789 })    // 啟動服務器並監聽 6789 端口。

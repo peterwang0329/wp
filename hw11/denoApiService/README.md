@@ -1,12 +1,12 @@
-# denoApiService
+# 作業11：請閱讀 denoApiService + Blog 的程式碼，並寫下你的理解，然後為程式碼加上詳細的註解
 
-支援以下功能
+- [原始碼](https://github.com/peterwang0329/wp/tree/master/hw11/denoApiService)
 
-1. fetch 跨站網頁
-    * 範例：[webFetchEx.html](test/webFetchEx.html) / [webFetchEx.js](test/webFetchEx.js)
-    * 注意：上述範例的 html 必須在伺服器上開啟才行 (例如用 deno 的 file_server)，否則還是會有 CORS 問題
-2. sqlite 資料庫
-    * 範例：[qadb.html](./test/qadb.html) / [qadb.js](./test/qadb.js) 
-    * 應用：[blog](./blog/index.html)
-3. upload 上傳檔案
-    * 範例：[upload.html](./test/upload.html)
+>嘗試自行理解程式內容(半理解)
+
+>使用ChatGPT協助查看部分內容(已加註)
+
+>目前只為 app.js hander.js lib.js ./blog/main.js 進行加註
+
+
+→[回統整頁](https://peterwang0329.github.io/wp/index.html)
